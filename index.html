@@ -13,19 +13,17 @@
 </head>
 <body>
     <h2>Enter Book Details</h2>
-    <input type="text" id="bookName" placeholder="Book name">
+    <input type="text" id="name" placeholder="Book name">
     <input type="text" id="author" placeholder="Author">
-    <input type="number" id="pageQuant" placeholder="Page count">
+    <input type="number" id="pageCount" placeholder="Page count">
 
     <label for="language">Select Language:</label>
     <select id="language">
         <option value="English">English</option>
-        <option value="Spanish">Spanish</option>
-        <option value="French">French</option>
-        <option value="German">German</option>
         <option value="Russian">Russian</option>
-        <option value="Chinese">Chinese</option>
-        <option value="Japanese">Japanese</option>
+        <option value="Tajik">Tajik</option>
+        <option value="Uzbek">Uzbek</option>
+        <option value="Arabic">Arabic</option>
     </select>
 
     <button onclick="sendData()">Submit</button>
@@ -33,9 +31,9 @@
     <script>
         function sendData() {
             let data = {
-                bookName: document.getElementById("bookName").value,
+                bookName: document.getElementById("name").value,
                 author: document.getElementById("author").value,
-                pageQuant: document.getElementById("pageQuant").value,
+                pageQuant: document.getElementById("pageCount").value,
                 language: document.getElementById("language").value
             };
 
