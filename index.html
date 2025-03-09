@@ -53,12 +53,17 @@
                 bookName: document.getElementById("Title").value,
                 author: document.getElementById("Author").value,
                 pageQuant: document.getElementById("TotalPages").value,
-                language: document.getElementById("Language").value
+                language: document.getElementById("Language").value // ✅ Fixed case sensitivity
             };
 
+            console.log("📤 Sending data:", data);
+
             if (window.Telegram.WebApp) {
+                console.log("✅ Telegram WebApp API Found!");
                 Telegram.WebApp.sendData(JSON.stringify(data)); // Send data to bot
                 Telegram.WebApp.close(); // Close Mini App
+            } else {
+                console.error("❌ Telegram WebApp API NOT Found!");
             }
         }
 
