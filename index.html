@@ -50,10 +50,10 @@
     <script>
         function sendData() {
             let data = {
-                bookName: document.getElementById("Title").value,
-                author: document.getElementById("Author").value,
-                pageQuant: document.getElementById("TotalPages").value,
-                language: document.getElementById("Language").value // ✅ Fixed case sensitivity
+                Title: document.getElementById("Title").value,
+                Author: document.getElementById("Author").value,
+                TotalPages: document.getElementById("TotalPages").value,
+                Language: document.getElementById("Language").value // ✅ Fixed case sensitivity
             };
 
             console.log("📤 Sending data:", data);
